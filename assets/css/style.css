@@ -440,16 +440,20 @@ main {
 }
 
 .sidebar-item{
-  color: var(--gray-400);
+  color: var(--gray-500);
   font-size: var(--fs-7);
   font-weight: var(--fw-300);
+  padding-bottom: 4px;
   
 }
 .sidebar-item:hover,.sidebar-item:focus{
-  color: var(--gray-600);
+  color: var(--gray-400);
 }
 
-.sidebar-item.active { color: var(--primary); }
+.sidebar-item.active { 
+  font-weight: var(--fw-500);
+  color: var(--gray-900); 
+}
 
 .project-detail-title{
   color:var(--gray-700);

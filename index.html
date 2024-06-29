@@ -38,7 +38,9 @@
   <!--
     Include Navbar
   -->
-  <div w3-include-html="navbar.html"></div>
+  <!-- <div w3-include-html="navbar.html"></div> -->
+  <div id="navbar-container"></div>
+
 
   <main>
   <!--
@@ -180,6 +182,15 @@
   -->
 
     <div w3-include-html="footer.html"></div>
+
+    <script>
+      // 載入 Navbar
+      fetch('/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+          });
+    </script>
 
 <!--
     Custom JS link

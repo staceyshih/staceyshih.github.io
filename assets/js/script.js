@@ -10,49 +10,43 @@ function showProgress() {
   document.getElementById("progressBar").style.width = scrolled + "%";
 }
 
-// Doesnt work!
-
-var object = document.querySelector(".navbar");
-
-function hideNavbar() {
-  const threshold = 5;
-  if (window.scrollY > threshold) {
-    object.classList.add('move');
-  } else {
-    object.classList.remove('move');
-  }
-}
-// window.addEventListener('scroll', debounce(earthmove, 5));
-
-
-function getContent() {
-
-  // Doesnt work!
-  var current = location.pathname;
-  current = current.replace("/", "");
-  current = current.replace(".html", "");
-
-  const navigationLinks = document.querySelectorAll("[data-nav-link]");
-
-
-  for (let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener("click", function () {
-
-      for (let i = 0; i < navigationLinks.length; i++) {
-          if(navigationLinks[i].innerHTML.toLowerCase()===current){
-            navigationLinks[i].classList.add("active");
-          }
-          else{
-            navigationLinks[i].classList.remove("active");
-          }
-        }
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebarLinks = document.querySelectorAll('.sidebar-item');
+  const sections = document.querySelectorAll('section');
   
-    });
+  function setActiveLink() {
+      let index = sections.length;
+
+      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+      
+      sidebarLinks.forEach((link) => link.classList.remove('active'));
+      sidebarLinks[index].classList.add('active');
   }
+  setActiveLink();
+  window.addEventListener('scroll', setActiveLink);
 
-}
+  sidebarLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
 
+//Doesn't work
+  const links = document.querySelectorAll('.navbar-item');
+  const currentPage = window.location.pathname.split('/').pop();
 
+  links.forEach(link => {
+    console.log(link.getAttribute('href'));
+      if (link.getAttribute('href') === '/'+currentPage) {
+          link.classList.add('active');
+      }
+     
+  });
+
+});
 
 
 // Hold back for HTML to be fully rendered
