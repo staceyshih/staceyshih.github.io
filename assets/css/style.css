@@ -817,8 +817,7 @@ body { background: var(--white); }
    */
 
   main {
-    margin-top: 40px;
-    margin-bottom: 100px;
+    margin: 40px 32px 100px 32px;
   }
 
 
@@ -910,6 +909,11 @@ body { background: var(--white); }
     max-width: calc(78% - 60px);
   }
 
+  .project-item{
+    padding-bottom: 20px;
+  }
+
+
   .bg-highlight{
     border-radius: 12px;
   }
@@ -988,6 +992,9 @@ body { background: var(--white); }
     margin-inline: auto;
   }
 
+  .intro{
+    padding-top: 100px;
+  }
   .intro, .article-title{
     padding-left: 16px;
   }
@@ -1007,8 +1014,8 @@ body { background: var(--white); }
 
   main { 
     max-width: calc(100% - 40px - 2%);
-    margin-top: 120px; 
-    margin-bottom: 60px;
+    margin-top: 20px; 
+    margin-bottom: 40px;
     margin-inline: auto;
   }
 
@@ -1102,7 +1109,7 @@ body { background: var(--white); }
    */
 
   main {
-    margin-top: 140px; 
+    margin-top: 40px; 
     max-width: 980px ;
     margin-inline: auto;
   }
