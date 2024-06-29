@@ -404,8 +404,9 @@ main {
 }
 
 .project-category {
+  padding-top: 4px;
   color: var(--gray-400);
-  font-size: var(--fs-6);
+  font-size: var(--fs-7);
   font-weight: var(--fw-300);
 }
 
@@ -420,7 +421,6 @@ main {
   position: relative;
   aspect-ratio: auto;
   margin-bottom: 15px;
-  padding-top: 8px;
   background-color:var(--gray-200);
 }
 
