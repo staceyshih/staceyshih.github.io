@@ -133,6 +133,10 @@ button {
   #REUSED STYLE
 \*-----------------------------------*/
 
+.bg-normal{
+  padding:var(--padding-20);
+}
+
 .bg-highlight{
   padding:var(--padding-20);
   background-color: var(--gray-primpary);
@@ -410,6 +414,12 @@ main {
 /*-----------------------------------*\
   #PAGE - PROJECT
 \*-----------------------------------*/
+
+.bg-normal>h2{
+  margin-bottom: 16px;
+  line-height: 1.35;
+}
+
 .project-banner {
   width: 100%;
   height: auto;
@@ -970,7 +980,7 @@ body { background: var(--white); }
    * REUSED STYLE
    */
    .bg-normal{
-    padding:0;
+    padding:20px;
   }
 
    .about-profile, .about-list, .about-detail, .article {
