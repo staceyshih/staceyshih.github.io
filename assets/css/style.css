@@ -287,6 +287,12 @@ article.active {
   font-size: var(--fs-7);
   padding: 12px 0px;
   transition: color var(--transition-1);
+  display: flex;
+  justify-content: center;
+}
+.nav-icon{
+  margin-top:2px;
+  margin-left: 2px;
 }
 
 .navbar-item:hover,.navbar-item:focus{
