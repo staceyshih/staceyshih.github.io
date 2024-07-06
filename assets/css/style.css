@@ -282,13 +282,22 @@ article.active {
   gap:16px;
 }
 
-.navbar-item,.email-link{
+.navbar-item{
   color: var(--gray-800);
   font-size: var(--fs-7);
   padding: 12px 0px;
   transition: color var(--transition-1);
   display: flex;
   justify-content: center;
+}
+
+.email-link{
+  color: var(--gray-800);
+  font-size: var(--fs-7);
+  padding: 12px 0px;
+  transition: color var(--transition-1);
+  display: flex;
+  justify-content: left;
 }
 .nav-icon{
   margin-top:2px;
@@ -443,6 +452,10 @@ main {
   transition: var(--transition-1);
 }
 
+.project-banner-normal{display:block;}
+.project-banner-wide{display:none;}
+
+
 .sidebar{
   width: max-content;
   max-width: 30%;
@@ -538,15 +551,19 @@ main {
 .stats-item{
   background-color: var(--gray-100);
   border-radius: 8px;
-  padding:12px 12px 16px 12px ;
-  align-items: center;
+  padding: 8px 12px 8px 12px ;
+  display: grid;
+  place-content: center;
 }
 
 .stats-text{
-  text-align: center;
   font-size: var(--fs-8);
   font-weight: var(--fw-400);
   color: var(--gray-600);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .project-img-2-column{
@@ -931,6 +948,7 @@ body { background: var(--white); }
   .article-title { padding-bottom: 20px; }
   .sidebar-item{
     font-size: var(--fs-8);
+    padding-bottom: 6px;
   }
   
 
@@ -965,7 +983,7 @@ body { background: var(--white); }
   }
 
   .footer-title { text-align: center; }
-  .email-link { text-align: center; }
+  .email-link { justify-content: center;}
   .social-list { justify-content: center; }
   .copyright-text{
     text-align: center;
@@ -1007,12 +1025,13 @@ body { background: var(--white); }
 
   .project-banner img {
     object-fit: cover;
-    max-width: 80%;
     overflow: hidden;
     position: relative;
     margin: auto;
-    /* left: 50%; */
   }
+
+  .project-banner-normal{display:none;}
+  .project-banner-wide{display:block;}
 
   /**
    * MAIN 
@@ -1070,9 +1089,6 @@ body { background: var(--white); }
     top: 120px;
   }
 
-  .sidebar-item{
-    font-size: var(--fs-7);
-  }
   
   
 
@@ -1121,11 +1137,9 @@ body { background: var(--white); }
   }
   
   .sidebar {
-    top: 120px;
+    max-width: 140px;
   }
-  
-  .project-banner>img{
-    margin-top:60px;
-  }
+
+
 
 }
