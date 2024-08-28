@@ -499,6 +499,13 @@ main {
   margin: 12px 0px 8px 0px;
 }
 
+.project-detail-title-small{
+  color:var(--gray-600);
+  font-size: var(--fs-4);
+  line-height: 1.48;
+  margin: 16px 0px 8px 0px;
+}
+
 .project-detail-subtitle{
   background-color: var(--gray-200);
   display: inline-flex;
