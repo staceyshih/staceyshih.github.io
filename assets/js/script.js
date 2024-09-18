@@ -10,6 +10,8 @@ function showProgress() {
   document.getElementById("progressBar").style.width = scrolled + "%";
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const sidebarLinks = document.querySelectorAll('.sidebar-item');
   const sections = document.querySelectorAll('section');
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
       sidebarLinks[index].classList.add('active');
   }
   setActiveLink();
+  
   window.addEventListener('scroll', setActiveLink);
 
   sidebarLinks.forEach(link => {
@@ -34,18 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-//Doesn't work
-  const links = document.querySelectorAll('.navbar-item');
-  const currentPage = window.location.pathname.split('/').pop();
+});
 
-  links.forEach(link => {
-    console.log(link.getAttribute('href'));
-      if (link.getAttribute('href') === '/'+currentPage) {
-          link.classList.add('active');
-      }
-     
-  });
+//needed to fix
+const navlinks = document.querySelectorAll('navbar-item');
+const windowPathname = window.location.pathname;
 
+console.log("hi");
+navlinks.forEach(navlink=>{
+  if(navlink.href.includes(windowPathname)){
+    navlink.classList.add('active');
+  }
 });
 
 
