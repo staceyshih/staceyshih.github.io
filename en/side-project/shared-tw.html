@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shared TW</title>
+
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+  <!--
+    Favicon
+  -->
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    Custom CSS link
+  -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--
+    Google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--
+    Include Progress bar
+  -->
+  <div w3-include-html="/progress.html"></div>
+
+  
+  <!--
+    Include Navbar
+  -->
+  <div w3-include-html="/en/navbar.html"></div>
+
+  <div> 
+    <figure class="project-banner">
+      <img src="/assets/images/project-sharedtw-heroimage.png" class="project-banner-normal" alt="sharedtw-heroimage" loading="lazy">
+      <img src="/assets/images/project-sharedtw-heroimage-L.png" class="project-banner-wide" alt="sharedtw-heroimage" loading="lazy">
+    </figure>
+
+    <div class="active project-parent" > 
+      
+      <div class="sidebar bg-normal">
+        <ul class="sidebar-list">
+          <li> 
+            <a href="#overview" class="sidebar-item">Overview</a>
+          </li>
+          <li > 
+            <a href="#research" class="sidebar-item">Research</a>
+          </li>
+          <li > 
+            <a href="#design" class="sidebar-item">Design Strategies</a>
+          </li>
+          <li > 
+            <a href="#solutions" class="sidebar-item">Solutions</a>
+          </li>
+          <li > 
+            <a href="#reflection" class="sidebar-item">Learning & Next Step</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="project-page">
+        <section class="bg-normal" id="overview">
+          <h2 class="h2">Shared TW - Donation Plateform</h2>
+          <div>
+            <h3 class="h3 project-detail-subtitle"> Overview </h3>
+            <p class="project-detail-text">
+              Shared TW 是一個物資需求媒合平台，受 2021 年台灣疫情爆發期間各方捐贈物資訊息啟發，正在探索如何能更有效率地針對物資需求及愛心捐贈進行媒合。‍重大事件發生時，常有物資短缺或捐贈物大量集中，導致過剩的狀況。透過建構一個簡易的媒合平台，可以即時呈現、更新捐贈狀況，協助分散時間和愛心，讓雙方溝通更加順暢。
+            </p>
+          </div>
+          <div>
+            <h3 class="h3 project-detail-subtitle"> Goal </h3>
+            <p class="project-detail-text">
+              讓有需求的單位，或是想要捐贈物資的民眾可以快速進行媒合、接洽。
+            </p>
+          </div>
+          <div class="prject-detail-stats">
+            <div class="stats-item">
+              <h5 class="h5 stats-title">Role</h5>
+              <h5 class="h5 stats-text">
+                    UI/UX Design
+              </h4>
+            </div>
+            <div class="stats-item">
+              <h5 class="h5 stats-title">Timeline</h5>
+              <h5 class="h5 stats-text">JUN - AUG 2021</h5>
+            </div>
+            <div class="stats-item">
+              <h5 class="h5 stats-title">Team Size</h5>
+              <h5 class="h5 stats-text">Solo Design</h5>
+            </div>
+          </div>
+        </section>
+        
+        <section class="bg-normal" id="research">
+          <h3 class="h3 project-detail-title"> Research </h3>
+          <h3 class="h3 project-detail-subtitle"> 現有需求資訊散落 </h3>
+          <p class="project-detail-text">
+            實際訪問醫院社工師，提到「許多地方性的基金會有物資需求，但他們目前只會將資訊上架在自己的粉專」。因此也較難受到大眾的關注、不利於資訊散佈。對熱心捐贈的民眾來說，也缺乏整合的平台可以即時得知「物資需求」的相關資訊。          </p>
+            <div>
+              <h3 class="h3 project-detail-subtitle">減少中介機構 </h3>
+              <p class="project-detail-text">
+                觀察既有的捐贈物資媒合平台，往往都是需要先期望以相對輕量的的方式，直接媒合供需雙方，不需透過機構中介、亦暫時無提供金流物流等服務。
+              <br><br>
+              由於疫情狀況不穩定，必須盡快完成第一階段 MVP 設計和手機頁面開發，以進行下一階段的提案和測試。我們選擇先專注在最核心的媒合流程，暫時去除金流，並簡化物流部分。
+              </p>
+            </div>
+
+        </section>
+        <section class="bg-normal" id="design">
+          <h3 class="h3 project-detail-title"> Design Strategies </h3>
+          <p class="project-detail-text">
+            為快速完成最小可行性產品，我們先建立了簡單的會員中心，並將使用者分為兩類：需求單位以及捐贈者。捐贈者可以查看物資需求列表選擇、捐贈申請流程。需求單位則可以建立需求，並進行需求狀態追蹤、更新需求內容。
+          </p>
+         
+        </section>
+        
+        <section class="bg-normal" id="solutions">
+          <h3 class="h3 project-detail-title"> Solutions </h3>
+          <figure class="project-detail-img">
+            <img src="/assets/images/shared-tw/flow-chart.jpeg" alt="flowchart" loading="lazy">
+            <h5 class="img-title">Shared TW - 捐贈＆需求管理流程圖</h5>
+          </figure>
+          <h3 class="h3 project-detail-subtitle"> 捐贈流程 </h3>
+            <h3 class="h3 project-detail-title-small"> 捐贈決策 </h3>
+            <p class="project-detail-text">
+              捐贈民眾可以在列表上查看自己所關心的單位是否有相關需求，另外也可以依「地區」或「單位類別」進行篩選。在選擇欲捐贈品項時，必須填妥「可捐贈數量」以及「預計可送達天數」等相關資訊，方便需求單位判斷是否接受該捐贈申請。
+              <br><br>
+              ps. 與後端工程師討論後，為減少資料複雜度，先暫時以「需求單位」為單位呈現需求內容。
+            </p>
+            <figure class="project-detail-img">
+              <img src="/assets/images/shared-tw/donation-status.png" alt="demo" loading="lazy">
+              <h5 class="img-title">瀏覽、篩選、填寫捐贈細節</h5>
+            </figure>
+            <h3 class="h3 project-detail-title-small"> 捐贈進度追蹤 </h3>
+            <p class="project-detail-text">
+              送出捐贈申請後，捐贈民眾可以到捐贈記錄頁面查看自己的申請是否有被需求方接受，若接受後即可自行準備下單、出貨，並改變捐贈申請的狀態。在需求方接受申請之前，若想要修改申請捐贈的數量，或甚至取消某一筆申請都可以直接在 Shared TW 平台操作。若申請被接受後，將獲得需求單位的聯絡資訊，可以主動接洽、調整捐贈內容。
+            </p>
+            <figure class="project-detail-img">
+              <img src="/assets/images/shared-tw/donation-process.png" alt="demo" loading="lazy">
+              <h5 class="img-title">捐贈進度追蹤＆捐贈內容調整</h5>
+            </figure>
+
+          <h3 class="h3 project-detail-subtitle"> 需求流程 </h3>
+            <h3 class="h3 project-detail-title-small"> 建立需求 </h3>
+            <p class="project-detail-text">
+              需求單位可以在登入後，直接建立需求，須填妥需求名稱和所需數量，若需求內容較複雜，亦可於備註欄多加說明。
+              <br><br>
+              Ps. 需求單位建立帳號時，必須使用組織的信箱進行認證，若電子信箱域名（email domain) 非經認證的組織則無法註冊。            </p>
+            <figure class="project-detail-img">
+              <img src="/assets/images/shared-tw/create-requirement.png" alt="demo" loading="lazy">
+              <h5 class="img-title">建立需求設定畫面</h5>
+            </figure>
+
+            <h3 class="h3 project-detail-title-small"> 需求管理 </h3>
+            <p class="project-detail-text">
+              在需求單位的會員頁面，設有「需求列表」和「申請列表」以及「通知中心」的入口，方便一線單位可以隨時修改需求內容，並追蹤每一件需求的捐贈達成率。
+            </p>
+            <figure class="project-detail-img">
+              <img src="/assets/images/shared-tw/requirement-management.png" alt="demo" loading="lazy">
+              <h5 class="img-title">需求管理相關畫面</h5>
+            </figure>
+        </section>
+       
+        <section class="bg-normal" id="reflection">
+          <h3 class="h3 project-detail-title"> Learning & Next Step </h3>
+          <p class="project-detail-text">
+            目前我們完成了第一階段的 UIUX 設計，並已與醫院等單位進行接洽。然而，在訪談過程中了解到：『第三方機構之所以存在的意義，可能是要保護<b>受贈者（需求方）之隱私</b>』，
+            比起將需求公開在網路上，社福機構更願意向熟識的單位或個人 等「經過驗證的管道」募集物資。需求資訊變相地反映出個案狀況，基於保護個案隱私的考量，會儘量考慮與政府或是經認證的基金會等機構合作。
+            
+            <br><br>
+            作為一個在網路上集結的不具名團體所開發的服務，在實務上較難被捐贈的供需雙方採納使用。
+            <br><br>
+            團隊成員目前的共識為：即使不能將我們的情境快速應用在捐贈媒合上，還是決定先將基本的平台架構完成。再進一步探索可應用的場景，為未來不時之需做好準備！
+          </p>
+        </section>
+        
+        <section class="bg-normal">
+          <div class="separator"></div>
+          <h4 class="project-recommendation-title"> Related Project </h4>
+          <div>
+            <a href="a11y-ebook-platform.html"  class="project-recommendation-card">
+              <figure class="project-recommendation-img">
+                <img src="/assets/images/project-ebook.png" alt="a11y-ebook-platform" loading="lazy">
+              </figure>
+              <div class="project-recommendation-info">
+                <h4>A11y E-book borrowing platform</h4>
+                <p>Web ∙ UI UX</p>
+              </div>
+              <ion-icon name="arrow-forward-outline" class="nav-icon"></ion-icon>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div> 
+
+  
+  <!--
+  Include Footer
+  -->
+  <div w3-include-html="/en/footer.html"></div>
+
+  <!--
+    Custom JS link
+  -->
+  <script src="/assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>

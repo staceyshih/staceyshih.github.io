@@ -11,7 +11,6 @@ function showProgress() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const sidebarLinks = document.querySelectorAll('.sidebar-item');
   const sections = document.querySelectorAll('section');
@@ -32,23 +31,29 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', function(e) {
           e.preventDefault();
           document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
+            block: 'start',
+            behavior: 'smooth'
           });
       });
   });
 
+
+  //Need to check
+  const navlinks = document.querySelectorAll('.navbar-item');
+  const windowPathname = window.location.pathname;
+  
+  navlinks.forEach(navlink=>{
+    if(navlink.href.includes(windowPathname)){
+      navlink.classList.add(' active');
+    }
+  });
+  
+
 });
 
-//needed to fix
-const navlinks = document.querySelectorAll('navbar-item');
-const windowPathname = window.location.pathname;
 
-console.log("hi");
-navlinks.forEach(navlink=>{
-  if(navlink.href.includes(windowPathname)){
-    navlink.classList.add('active');
-  }
-});
+
+
 
 
 // Hold back for HTML to be fully rendered

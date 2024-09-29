@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stacey Shih</title>
+
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+  <!--
+    Favicon
+  -->
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    Custom CSS link
+  -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--
+    Google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!--
+    Include Progress bar
+  -->
+  <div w3-include-html="/progress.html"></div>
+
+  <!--
+    Include Navbar
+  -->
+  <!-- <div w3-include-html="navbar.html"></div> -->
+  <div id="navbar-container"></div>
+
+
+<main>
+  <!--
+    Intro
+  -->
+    <article class="intro active">
+      <figure>
+        <!-- <img src="../assets/images/stacey-say-hi.png"  class="intro-image"></img> -->
+      </figure>
+      <header>
+        <h2 class="h2 intro-title">嗨, 我是 Stacey 👋🏽 </h2>
+      </header>
+      <section class="intro-text">
+        我是一位擁有 7 年經驗的 UIUX 設計師<br>
+        我喜歡嘗試解決複雜問題，並透過自身的設計能力為世界帶來正面貢獻。
+      </section>
+      
+    </article>
+
+    <div class="separator"></div>
+
+  <!--
+      Selected projects
+    -->
+
+    <article class="portfolio active">
+      <header>
+        <h2 class="h2 article-title">精選專案</h2>
+      </header>
+  
+      <section class="projects">
+        <ul class="project-list">
+
+          <li class="project-item active">
+            <a href="/zh/project/teamdoor.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-teamdoor.png" alt="Teamdoor - HR SaaS" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Teamdoor - 招募管理 SaaS</h3>
+
+              <p class="project-category">Web ∙ User Research ∙ UI UX</p>
+
+            </a>
+          </li>
+
+          <li class="project-item active">
+            <a href="project/yourator-management.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-Yourator.png" alt="Application Management" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">投遞管理後台 設計優化</h3>
+
+              <p class="project-category">Web ∙ UI UX</p>
+
+            </a>
+          </li>
+
+          <li class="project-item active">
+            <a href="project/fanloop.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-fanloop.png" alt="FanLoop - Trendy Video App" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">FanLoop - 潮流影音 App</h3>
+
+              <p class="project-category">App ∙ UI UX</p>
+
+            </a>
+          </li>
+
+          <li class="project-item active">
+            <a href="project/discovery-research.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-discovery-research.png" alt="Content Discovery Research" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">TV 影音內容瀏覽 使用者研究</h3>
+
+              <p class="project-category">Bigscreen ∙ User Research ∙ Prototyping</p>
+
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+    
+
+    <div class="separator"></div>
+
+    <!--
+      Side projects
+    -->
+    
+    <article class="portfolio active">
+      <header>
+        <h2 class="h2 article-title">其他個人專案</h2>
+      </header>
+  
+      <section class="projects">
+        <ul class="project-list">
+          <li class="project-item active">
+            <a href="side-project/shared-tw.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-sharedtw.png" alt="Shared TW - Donation Plateform loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Shared TW - 捐贈平台設計</h3>
+
+              <p class="project-category">Web App ∙ UI UX</p>
+
+            </a>
+          </li>
+
+          <li class="project-item active">
+            <a href="side-project/a11y-ebook-platform.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-ebook.png" alt="E-book borrowing platform" loading="lazy">
+              </figure>
+
+              <h3 class="project-title">電子書借閱平台 無障礙設計</h3>
+
+              <p class="project-category">Web ∙ Accessbility ∙ UI UX</p>
+
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+    
+</main>
+
+  <!--
+    Include Footer
+  -->
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+      // 載入 Navbar
+      fetch('navbar.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('navbar-container').innerHTML = data;
+          });
+    </script>
+
+<!--
+    Custom JS link
+  -->
+<script src="/assets/js/script.js"></script>
+
+<!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="js/jquery.min.js"></script>
+
+</body>
+</html>

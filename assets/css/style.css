@@ -320,7 +320,7 @@ article.active {
   color: var(--gray-400);
 }
 
-.navbar-item.active { color: var(--primary); }
+.navbar-item.active { color: var(--primary-dark-2); }
 
 /*-----------------------------------*\
   #MAIN

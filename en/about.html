@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Stacey</title>
+
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+  <!--
+    Favicon
+  -->
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    Custom CSS link
+  -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--
+    Google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!--
+    Include Progress bar
+  -->
+  <div w3-include-html="/progress.html"></div>
+
+  
+  <!--
+    Include Navbar
+  -->
+  <!-- <div w3-include-html="navbar.html"></div> -->
+
+  <div id="navbar-container"></div>
+
+  <!--
+    About
+  -->
+  <article class="active">
+    <div class="about-profile bg-highlight">
+      <h2 class="h2 article-title">About me</h2>
+      <div class="about-profile-info" >
+        <figure class="about-profile-img">
+          <img src="/assets/images/stacey-profile-with-back.png" alt="stacey-profile" loading="lazy">
+        </figure>
+        <section class="about-profile-text">
+          I am Stacey, a curious designer with an appetite for Facilitating Discussions, User Research and Illustrations.
+        </section>
+      </div>
+    </div> 
+  </article>
+
+<main>
+  <article class="active">
+    <div class="about-list">
+      <h2 class="h2 article-title">Workshop Facilitation</h2>
+
+      <div class="about-detail">
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-workshop-2.jpeg" alt="workshop-2" loading="lazy">
+          <h4 class="about-title">Internal Brain Storming</h4>
+          <h5 class="about-text">While designing the Teamdoor authorization system, it is necessary to first understand what value partners want to bring to users through Teamdoor.</h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-workshop-3.jpeg" alt="workshop-3" loading="lazy">
+          <h4 class="about-title">Design Thinking Workshop</h4>
+          <h5 class="about-text">Conducted life planning workshop for Microsoft interns, enabling better understanding about themselves while helping each others to achieve their life goal.</h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-workshop-1.jpeg" alt="workshop-1" loading="lazy">
+          <h4 class="about-title">FOF Taiwan Meetups</h4>
+          <h5 class="about-text">During the pandemic, FOF Taiwan launched a series of online design learning events. We designed the discussion process and had a lot of fun.</h5>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <div class="separator"></div>
+
+  <article class="active">
+      <div class="about-list">
+      <h2 class="h2 article-title">User Research</h2>
+
+      <div class="about-detail">
+
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-research-1.png" alt="Research-1" loading="lazy">
+          <h4 class="about-title">Research Planning</h4>
+          <h5 class="about-text">
+            The most interesting part of research planning is aligning stakeholder expectations and finding the most effective way to obtain useful insights within the project's constraints.
+          </h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-research-2.jpg" alt="Research-2" loading="lazy">
+          <h4 class="about-title">User Interview</h4>
+          <h5 class="about-text">
+            I have conducted over 60 user interviews,focus groups and usability tests, and I enjoy uncovering the hidden thoughts of our users throughout the process.
+          </h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-research-3.png" alt="Research-3" loading="lazy">
+          <h4 class="about-title">Research Analysis</h4>
+          <h5 class="about-text">
+            Effectively organizing and tanslating all the findings and insights to stakeholders, ensuring the research makes a significant impact. It's a skill I’m constantly refining and enjoy improving.</h5>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+  <div class="separator"></div>
+
+  <article class="active">
+      <div class="about-list">
+      <h2 class="h2 article-title">Illustrations</h2>
+
+      <div class="about-detail">
+
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-illustration-1.png" alt="Illustration-1" loading="lazy">
+          <h4 class="about-title">Brand Character Design</h4>
+          <h5 class="about-text">Meet Captain "Hire-meow", Yourator's branding charator featuring spacial adventures </h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-illustration-2.png" alt="Illustration-2" loading="lazy">
+          <h4 class="about-title">Product Illustrations</h4>
+          <h5 class="about-text">The beluga in Teamdoor aims to bring a unique touch to HR's busy recruiting process
+          </h5>
+        </figure>
+        <figure class="about-detail-img">
+          <img src="/assets/images/about-illustration-3.jpeg" alt="Illustration-3" loading="lazy">
+          <h4 class="about-title">Daily Doodling</h4>
+          <h5 class="about-text">
+            I sometimes draw to document life or express what words can't. I truly cherish these moments!</h5>
+        </figure>
+      </div>
+    </div>
+  </article>
+
+
+</main>
+
+   
+  <!--
+    Include Footer
+  -->
+
+  <div w3-include-html="footer.html"></div>
+ 
+  <script>
+    // 載入 Navbar
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        });
+  </script>
+  <!--
+      Custom JS link
+    -->
+  <script src="/assets/js/script.js"></script>
+  
+  <!--
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</body>
+</html>

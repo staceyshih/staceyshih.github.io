@@ -13,12 +13,12 @@
   <!--
     Favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
 
   <!--
     Custom CSS link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   <!--
     Google font link
@@ -33,7 +33,7 @@
   <!--
     Include Progress bar
   -->
-  <div w3-include-html="progress.html"></div>
+  <div w3-include-html="/progress.html"></div>
 
   <!--
     Include Navbar
@@ -75,10 +75,10 @@
         <ul class="project-list">
 
           <li class="project-item active">
-            <a href="project/teamdoor.html">
+            <a href="/en/project/teamdoor.html">
 
               <figure class="project-img">
-                <img src="./assets/images/project-teamdoor.png" alt="Teamdoor - HR SaaS" loading="lazy">
+                <img src="/assets/images/project-teamdoor.png" alt="Teamdoor - HR SaaS" loading="lazy">
               </figure>
 
               <h3 class="project-title">Teamdoor - HR SaaS</h3>
@@ -92,7 +92,7 @@
             <a href="project/yourator-management.html">
 
               <figure class="project-img">
-                <img src="./assets/images/project-Yourator.png" alt="Application Management" loading="lazy">
+                <img src="/assets/images/project-Yourator.png" alt="Application Management" loading="lazy">
               </figure>
 
               <h3 class="project-title">Application Management Redesign</h3>
@@ -106,7 +106,7 @@
             <a href="project/fanloop.html">
 
               <figure class="project-img">
-                <img src="./assets/images/project-fanloop.png" alt="FanLoop - Trendy Video App" loading="lazy">
+                <img src="/assets/images/project-fanloop.png" alt="FanLoop - Trendy Video App" loading="lazy">
               </figure>
 
               <h3 class="project-title">FanLoop - Trendy Video App</h3>
@@ -120,7 +120,7 @@
             <a href="project/discovery-research.html">
 
               <figure class="project-img">
-                <img src="./assets/images/project-discovery-research.png" alt="Content Discovery Research" loading="lazy">
+                <img src="/assets/images/project-discovery-research.png" alt="Content Discovery Research" loading="lazy">
               </figure>
 
               <h3 class="project-title">Content Discovery on Bigscreen</h3>
@@ -147,12 +147,25 @@
   
       <section class="projects">
         <ul class="project-list">
+          <li class="project-item active">
+            <a href="side-project/shared-tw.html">
+
+              <figure class="project-img">
+                <img src="/assets/images/project-sharedtw.png" alt="Shared TW - Donation Plateform loading="lazy">
+              </figure>
+
+              <h3 class="project-title">Shared TW - Donation Platform</h3>
+
+              <p class="project-category">Web App ∙ UI UX</p>
+
+            </a>
+          </li>
 
           <li class="project-item active">
             <a href="side-project/a11y-ebook-platform.html">
 
               <figure class="project-img">
-                <img src="./assets/images/project-ebook.png" alt="E-book borrowing platform" loading="lazy">
+                <img src="/assets/images/project-ebook.png" alt="A11y E-book borrowing platform" loading="lazy">
               </figure>
 
               <h3 class="project-title">A11y E-book borrowing platform</h3>
@@ -162,19 +175,7 @@
             </a>
           </li>
 
-          <li class="project-item active">
-            <a href="side-project/shared-tw.html">
-
-              <figure class="project-img">
-                <img src="./assets/images/project-sharedtw.png" alt="Shared TW - Donation Plateform loading="lazy">
-              </figure>
-
-              <h3 class="project-title">Shared TW - Donation Platform</h3>
-
-              <p class="project-category">Web App ∙ UI UX</p>
-
-            </a>
-          </li>
+          
         </ul>
       </section>
     </article>
@@ -189,7 +190,7 @@
 
     <script>
       // 載入 Navbar
-      fetch('/navbar.html')
+      fetch('navbar.html')
           .then(response => response.text())
           .then(data => {
               document.getElementById('navbar-container').innerHTML = data;
@@ -199,7 +200,7 @@
 <!--
     Custom JS link
   -->
-<script src="./assets/js/script.js"></script>
+<script src="/assets/js/script.js"></script>
 
 <!--
     - ionicon link
