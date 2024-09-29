@@ -256,10 +256,10 @@ article.active {
 
 .navbar {
   position: fixed;
-  bottom: 24px;
+  bottom: 20px;
   width: 100%;
   max-width: calc(100% - 40px);
-  padding: 8px 5% 8px 5%;
+  padding: 6px 5% 6px 5%;
   left: 50%;
   transform: translate(-50%, 0%);
   background: var(--gray-50-70);
@@ -749,7 +749,7 @@ main {
 
 .about-profile-text {
   color: var(--gray-500);
-  font-size: var(--fs-4);
+  font-size: var(--fs-5);
   font-weight: var(--fw-300);
   margin: 16px;
   line-height: 1.48;
@@ -851,16 +851,16 @@ body { background: var(--white); }
   #RESPONSIVE
 \*-----------------------------------*/
 
-/**
- * responsive larger than 450px screen
- */
-
- @media (min-width: 450px) {
+ @media (min-width: 280px) {
 
 
   /**
    * #PORTFOLIO
    */
+   .navbar-list { 
+    gap: 0px 8px;
+    overflow: hidden;
+  }
 
   .project-img{ height: auto; }
   .footer{
@@ -869,8 +869,27 @@ body { background: var(--white); }
 
 }
 
+/**
+ * responsive larger than 450px screen
+ */
+
+@media (min-width: 450px) {
 
 
+  /**
+   * #PORTFOLIO
+   */
+   .navbar-list { 
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  .project-img{ height: auto; }
+  .footer{
+    padding: 24px 24px 96px 24px;
+  }
+
+}
 
 
 /**
@@ -893,8 +912,9 @@ body { background: var(--white); }
     --fs-2: 24px;
     --fs-3: 26px;
     --fs-4: 18px;
+    --fs-5: 16px;
     --fs-6: 15px;
-    --fs-7: 15px;
+    --fs-7: 14px;
     --fs-8: 12px;
 
   }
@@ -952,7 +972,7 @@ body { background: var(--white); }
    * #NAVBAR
    */
 
-  .navbar-list { gap: 20px; }
+  .navbar-list { gap: 12px; }
 
   /**
    * #ABOUT
@@ -968,7 +988,7 @@ body { background: var(--white); }
     max-width: 80%;
   }
   .about-profile-text{
-    font-size: --;
+    font-size: var(--fs-4);
   }
 
 
@@ -999,7 +1019,7 @@ body { background: var(--white); }
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
   .navbar {
-    padding: 12px 2% 12px 2%;
+    padding: 8px 2% 8px 2%;
   }
 
   /**
@@ -1067,7 +1087,7 @@ body { background: var(--white); }
     margin: 0px 64px;
   }
   .about-profile-text{
-    font-size: var(--fs-3);
+    font-size: var(--fs-4);
   }
 
   /**
@@ -1173,7 +1193,7 @@ body { background: var(--white); }
     max-width: calc(100% - 40px);
     height: max-content;
     border-radius: 20px;
-    padding: 16px 2.5% 16px 2.5% ;
+    padding: 12px 2.5% 12px 2.5% ;
     box-shadow: var(--shadow-2);
     background-color: var(--gray-50-70);
   }
