@@ -1151,7 +1151,7 @@ body { background: var(--white); }
     font-size: var(--fs-0);
     font-weight: var(--fw-600);
     max-width: 80vw;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
 
   .intro-text{
@@ -1159,7 +1159,7 @@ body { background: var(--white); }
     font-size: var(--fs-3);
     font-weight: var(--fw-300);
     line-height: 1.6;
-    margin-bottom: 60px;
+    margin-bottom: 32 px;
   }
   .intro{
     padding-top: 16vh;
