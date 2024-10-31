@@ -744,7 +744,10 @@ main {
 
 .about-profile-img{
   margin: 16px 12px;
-  max-width: 480px;
+  max-width: 60vw;
+  min-width: 280px;
+   margin-left: auto;
+  margin-right: auto;
 }
 
 .about-profile-img>img{
@@ -755,11 +758,11 @@ main {
 
 
 .about-profile-text {
-  color: var(--gray-500);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-300);
+  color: var(--gray-600);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-400);
   margin: 16px;
-  line-height: 1.48;
+  line-height: 1.6;
 }
 
 
@@ -1207,7 +1210,7 @@ body { background: var(--white); }
   }
 
   .navbar-item{
-    font-size: var(--fs-4);
+    font-size: var(--fs-5);
   }
   .navbar-brand{
     font-size: var(--fs-4);
