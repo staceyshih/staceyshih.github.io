@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yourator Management</title>
+  <title>投遞管理後台 設計優化</title>
 
   <script src="https://www.w3schools.com/lib/w3.js"></script>
 
@@ -111,9 +111,11 @@
         <section class="bg-normal" id="background">
           <h3 class="h3 project-detail-title"> 專案背景 </h3>
           <p class="project-detail-text">
-            2017 年職缺管理後台上線時，團隊觀察到 HR 大多在電腦上進行複雜的招募管理，加上當時的開發成本資源不足，在手機版只做最小程度的優化，讓資訊可以被完整呈現。
+            第一版的後台設計是在 2017 年上線。當時，團隊觀察到 HR 大多在電腦上進行複雜的招募管理，加上開發成本資源不足，因此在手機版只做最小程度的優化 : 將資訊完整呈現。
             <br><br>
-            隨著使用習慣的改變，陸續有 HR 開始想要使用手機進行管理。尤其平台上有許多新創團隊，很需要人手，同時習慣快速的工作節奏。因為招募後台無法滿足需求而累積大量客訴。因此團隊決定針對後台進行改版優化，並從滿意度最低的「招募管理」開始著手。
+            隨著大眾使用習慣的改變，陸續有 HR 開始想要使用手機進行管理。加上有許多工作節奏快速、急需人手的新創團隊開始使用 Yourator，現有的招募後台無法滿足需求，累積了大量客訴需要業務人工處理、教學，降低了工作效率。
+            <br><br>
+            因此團隊決定針對後台進行改版優化，並從使用者滿意度最低的「招募管理」功能開始調整。
           </p>
           <div class="project-img-2-column">
             <figure class="project-detail-img">
@@ -127,49 +129,62 @@
         <section class="bg-normal" id="research">
           <h3 class="h3 project-detail-title"> 問題發現 Discovery </h3>
           <p class="project-detail-text">
-            因後台使用者較少有意願接受訪談，加上內部已經有收到大量的客訴功能優化，我們選擇主要以下兩種研究方式進行問題定義：
+            因後台使用者大多為忙碌的 HR 或 CEO，較少有時間和意願接受訪談。
+            <br><br>
+            加上內部已經有長期紀錄使用行為的工具(如 : Hotjar, Google Analytics)，以及業務端有收到大量的客訴和功能優化許願池，我們選擇主要以下 2 種研究方式協助團隊找出要優先鎖定的問題：
           </p>
             <div>
-              <h3 class="h3 project-detail-subtitle"> 使用者行為分析 User Behavior Analysis </h3>
+              <h3 class="h3 project-detail-subtitle"> 1. 使用者行為分析 </h3>
               <p class="project-detail-text">
-                觀察近三個月內的點擊、滑鼠熱點圖
+                觀察投遞管理流程之相關頁面近 6 個月內的點擊、滑鼠熱點圖
                 <br>
-                分析約 100+ 部使用者操作側錄影片
+                觀看並分析約 60 部使用者操作側錄影片
               </p>
             </div>
             <div>
-              <h3 class="h3 project-detail-subtitle"> 內部專家訪談 Internal Interview </h3>
+              <h3 class="h3 project-detail-subtitle"> 2. 內部專家訪談</h3>
               <p class="project-detail-text">
-                訪談內部幾種角色：1. 招募專家（獵頭） 2. 業務（第一手負責後台操作教育、客服）
+                訪談團隊內部的以下兩種職能成員各 2 位：
+                <br>
+                 1. 獵頭 - 招募專家
+                 <br>
+                 2. 業務 - 客戶專家，負責後台操作教育、客服）
+                 <br>
+                 <br>
+                 了解在使用後台系統時最容易遇到的問題或痛點，以及客戶在投遞管理的流程中經常反覆提出的問題與情境。
               </p>
             </div>
             <p class="project-detail-text">
-              而我們有了以下幾點發現：
+              透過以上兩種研究方法，我們有了以下幾點發現：
             </p>
           <div class="detail-highlight">
             <h3 class="highlight-title"> 研究發現 Insights </h3>
             <div class="highlight-subtitle"> 1. 回覆訊息時，需要同時查看綜合資料</div>
             <h4 class="highlight-text"> 
-              從螢幕熱點圖以及錄影中，觀察到許多使用者點開訊息後，會馬上點撃「完整履歷」
+              首先，從螢幕熱點圖以及錄影中，觀察到許多使用者點開訊息後，會馬上點撃「完整履歷」。
               <br>
-              <br>
-              體驗
+              然後，在內部訪談時，獵頭提到：經常同時跟很多不同職能的人選聯繫，為了讓求職者有良好的招募體驗，溝通前後經常需要「反覆核對資訊，避免失誤」。
               <figure class="project-detail-img">
                 <img src="/assets/images/yourator/hotjar-pattern.jpg" alt="Hotjar pattern" loading="lazy">
-                <h5 class="img-title">image description</h5>
+                <h5 class="img-title">操作錄影中的常見路徑</h5>
               </figure>
-              <figure class="project-detail-img">
-                <img src="/assets/images/yourator/hotjar-heatmap.jpg" alt="Heatmap" loading="lazy">
-                <h5 class="img-title">image description</h5>
-              </figure>
+              
             </h4>
             
-            <div class="highlight-subtitle"> 2. 後台使用者的裝置類型非常多元</div>
+            <div class="highlight-subtitle"> 2. HR 在回訊息之前不一定需要先看過履歷</div>
+            <h4 class="highlight-text"> 
+              前一版本中，為了確保訊息回覆的品質，系統限制 HR 一定要「先看過履歷」才能開啟和求職者的對話，意即「HR 無法在未瀏覽履歷前就傳訊息給求職者」。
+              <br>
+              <br>
+              但在內部訪談和業務所整理的客戶回饋中發現：這項規則並不符合所有使用情境，反而還增加了 HR 操作上多餘的步驟，造成困惑。
+              因此在此次設計上將訊息回覆和履歷查看的邏輯脫鉤，增加快速回覆的便利度。
+            </h4>
+            
+            <div class="highlight-subtitle"> 3. 後台使用者的裝置類型非常多元</div>
             <h4 class="highlight-text"> 
               在 Hotjar & Google Analytics 中觀察到，除了手機之外，多數 HR 使用的裝置特殊，螢幕寬度尺寸 1000 多 - 2480px 皆有。
               其中，最多人使用的裝置寬度包含 1920,1440,1280 以及 420 px。
             </h4>
-            
             
           </div>
           
@@ -178,17 +193,18 @@
         </section>
         <section class="bg-normal" id="design">
           <h3 class="h3 project-detail-title"> Design Strategies </h3>
-          <div class="project-detail-quote">優化「多工處理」的流程</div>
+          <div class="project-detail-quote">降低操作複雜度，並優化「多工處理」的流程、支援各種裝置顯示。
+          </div>
           <p class="project-detail-text">
-            經過研究，我們發覺.........
+            經過研究，我們發覺 HR 是「很需要多工處理」的職能，必須整合多種類型的資訊，進行綜合判斷。
+            <br>
+            同時，為了方便 HR 更有效率地完成招募管理工作，我們調整了後台的頁面架構、加強了狀態提示讓需要被處理的項目一目了然，同時放寬系統限制、增加許多快捷管道，增加招募管理的方便度與使用上的彈性。
           </p>
          
             <div>
-              <h3 class="h3 project-detail-subtitle"> 1. 調整資訊架構 </h3>
+              <h3 class="h3 project-detail-subtitle"> 1. 資訊集中顯示 </h3>
               <p class="project-detail-text">
-                桌機版 - 優化多工處理流程，讓需要被處理的項目一目瞭然
-                將與特定求職者相關的所有資訊集中顯示
-                對話匡與履歷可以顯示在同一頁
+                將與特定求職者相關的所有資訊集中在同一個畫面，並且增加對話框與履歷可以顯示在同一頁面階層、整合快捷訊息模板，讓查看資訊並回覆訊息變得更彈性且有效率。
                 <br>
                 <br>
                 在總覽頁新增「未讀訊息」之入口，使用者可以一目了然，並直接進行回覆未讀訊息的動作。
@@ -201,51 +217,66 @@
               </p>
             </div>
             <div>
-              <h3 class="h3 project-detail-subtitle"> 2. 增加「回覆訊息」的提示性</h3>
+              <h3 class="h3 project-detail-subtitle"> 2. 增加明確的「訊息回覆狀態」提示</h3>
               <p class="project-detail-text">
-                在投遞管理之「篩選」區塊中，讓使用能以不同「訊息狀態」進行篩選，並在不同階段增加提示，以「開始對話」、「您未回覆」提示 HR 動作
+                在投遞管理之「篩選」區塊中，讓使用能以不同「訊息狀態」進行篩選，並在不同階段增加提示，以「開始對話」、「您未回覆」提示 HR 盡快進行相對應的操作。
                 <figure class="project-detail-img">
-                  <img src="/assets/images/yourator/hotjar-heatmap.jpg" alt="Heatmap" loading="lazy">
+                  <img src="/assets/images/yourator/hotjar-heatmap.jpg" alt="Messeage Label" loading="lazy">
                   <h5 class="img-title">在不同階段增加提示</h5>
                 </figure>
               </p>
             </div>
             <div>
-              <h3 class="h3 project-detail-subtitle"> 3. 在不同裝置下都能查看完整資訊</h3>
+              <h3 class="h3 project-detail-subtitle"> 3. 新增快捷入口</h3>
               <p class="project-detail-text">
-                不論是與求職者的信件往來或徵才頁面，都是企業傳遞給外界的品牌訊息。建立好的品牌形象，可以吸引到更多優質人才加入！
+                在總覽頁新增「未讀訊息」之入口，使用者可以一目了然，並直接進行回覆未讀訊息的動作。 針對未讀的履歷也可以快速回覆訊息*。
               </p>
               <figure class="project-detail-img">
                 <img src="/assets/images/yourator/hotjar-heatmap.gif" alt="RWD Demo" loading="lazy">
                 <h5 class="img-title"> 透過 flexible plug-in 向工程師說明變化方式</h5>
               </figure>
+
+              
             </div>
-          <p class="project-detail-text">
-            同時，必須維護數據分析功能，每次新增或修改功能都要確保功能改動不會造成數據紀錄的偏誤，未來才能幫助進行招募成效的追蹤與分析。
-          </p>
+            <div>
+              <h3 class="h3 project-detail-subtitle"> 4.在任意裝置都能順利使用</h3>
+              <p class="project-detail-text">
+                不論是忙碌的 CEO 或是 HR，都能隨時隨地查看履歷並回覆求職者，提供好的求職體驗，讓招募更順利！
+              </p>
+              <figure class="project-detail-img">
+                <img src="/assets/images/yourator/hotjar-heatmap.gif" alt="RWD Demo" loading="lazy">
+                <h5 class="img-title"> 透過 flexible plug-in 向工程師說明變化方式</h5>
+              </figure>
+
+              
+            </div>
+        
          
         </section>
         <section class="bg-highlight" id="outcome">
           <h3 class="h3 project-detail-title"> Outcome </h3>
           <p class="project-detail-text">
-            HR 們常常會在協作溝通以及投遞管理上花費大量的時間，而無法有完整的時間處理策略面的工作，例如：進行招募決策，或優化僱主品牌等。
-            Teamdoor 透過整合各種來源的履歷表、自動產出數據報表，增加招募管理的效率。同時具備許多協作功能，幫助團隊在招募上溝通更加順暢！
+            在此專案上線後六個月內，HR 平均回覆訊息所需時間降低了 30%，由原本的 ＿＿＿ 降低為 ＿＿＿。同時 HR ＆ 求職者傳遞的訊息數量也增加了 ＿＿。期間職缺數量、投遞數量並無差異太多，可以解讀為 HR 與 求職者開始有更頻繁的溝通。
+            原先客訴的數量亦大幅減少，釋出更多業務團隊的時間，可以花費在更有生產力的事情上。            
           </p>
         </section>
         <section class="bg-normal" id="reflection">
           <h3 class="h3 project-detail-title"> Reflections </h3>
           <h4 class="h4 project-detail-subtitle"> 未來規劃 </h4>
           <p class="project-detail-text">
-            總是可以做得更細緻
+            可以納入更多團隊內部的筆記資訊
+
             <br>
             團隊 vs 個人的已 / 未讀 區分 
           </p>
           <h4 class="h4 project-detail-subtitle"> 學習 </h4>
           <p class="project-detail-text">
-            由於本次是迭代自己實習時的設計作品，會意識到當時思考的限制、和自己的成長，這次的改版透過前期研究，針對使用情境有了更深刻的體悟，也更能增加設計專案的有效性。
+            很高興藉著此次改版的機會，參與規劃了後台產品的改版上線流程 —- 包含 研究規劃（問卷 / 訪談 / Hotjar Rating）、上線前後的準備工作（如：新功能服務手冊撰寫、使用回饋管道設定），並提供可切換回舊版的管道，以及教學、常見問題的入口。
             <br><br>
             也很高興借此機會，著手規劃後台產品的改版上線流程：上線前準備、研究規劃（問卷 / 訪談 / Hotjar Rating）、提供可切換回來的管道
-            新功能服務手冊撰寫，設計這個流程也和團隊討論許久，但考量到這是 200 家 HR 每天依賴的後台，...
+            新功能服務手冊撰寫等等..畢竟這是 200 家企業的創辦人、HR 每天會登入使用的後台，希望最大程度地減少重新適應新介面的阻力，也很高興最後幾乎沒有使用者切換回舊版使用。
+            <br><br>
+            由於本次是迭代自己實習時的設計作品，回頭看之前的設計，更加意識到當時思考上的自我設限、以及這一路以來自己的成長。這次的改版透過前期研究，針對使用情境有了更深刻的體悟，也更能增加設計專案的有效性。
           </p>
         </section>
         <section class="bg-normal">
@@ -257,7 +288,7 @@
                 <img src="/assets/images/project-fanloop.png" alt="FanLoop" loading="lazy">
               </figure>
               <div class="project-recommendation-info">
-                <h4>FanLoop - 潮流影音 App</h4>
+                <h4>FanLoop 潮流影音 App</h4>
                 <p>App ∙ UI UX</p>
               </div>
               <ion-icon name="arrow-forward-outline" class="nav-icon"></ion-icon>
