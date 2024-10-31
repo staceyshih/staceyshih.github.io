@@ -55,7 +55,7 @@
   --ff-poppins: 'Poppins', sans-serif;
 
   /* font-size */
-  --fs-0: 48px;
+  --fs-0: 36px;
   --fs-1: 24px;
   --fs-2: 20px;
   --fs-3: 17px;
@@ -1150,7 +1150,7 @@ body { background: var(--white); }
    .intro-title{
     font-size: var(--fs-0);
     font-weight: var(--fw-600);
-    max-width: 80%vw;
+    max-width: 80vw;
     margin-bottom: 32px;
   }
 
@@ -1162,7 +1162,7 @@ body { background: var(--white); }
     margin-bottom: 60px;
   }
   .intro{
-    padding-top: 20vh;
+    padding-top: 16vh;
   }
 
   .intro, .article-title{
