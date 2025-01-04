@@ -611,9 +611,30 @@ main {
 .project-detail-text{
   font-size: var(--fs-5);
   line-height: 1.64;
-  margin: 8px 0px 20px 0px;
+  margin: 8px 0px 12px 0px;
   color: var(--gray-600);
 }
+
+ol{
+  margin-bottom: 12px;
+}
+ol>li{
+  font-size: var(--fs-5);
+  color: var(--gray-600);
+  margin-left: 20px;
+  padding: 2px;
+  text-align: left;
+  list-style-type:decimal;
+  display: list-item;
+}
+ol>p{
+  font-size: var(--fs-5);
+  line-height: 1.64;
+  margin: 2px 0px 16px 24px;
+  color: var(--gray-600);
+
+}
+
 
 .project-detail-quote{
   width: 100%;
@@ -665,6 +686,14 @@ main {
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.stats-text>ul>li{
+  margin-left: 20px;
+  padding: 4px;
+  text-align: left;
+  list-style-type:circle;
+  display: list-item;
 }
 
 
