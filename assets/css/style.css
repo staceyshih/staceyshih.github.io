@@ -318,7 +318,11 @@ article.active {
   color: var(--gray-400);
 }
 
-.navbar-item.active { color: var(--primary-dark-2); }
+.navbar-item.active { 
+  font-weight: var(--fw-600);
+  color: var(--primary);
+
+}
 
 /*-----------------------------------*\
   #MAIN

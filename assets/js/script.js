@@ -8,6 +8,29 @@ function showProgress() {
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
+
+}
+
+window.onload = function(){currentPage()};
+//can't show correctly, mightbe the trigger problem
+
+// document.getElementById("navbar-list").addEventListener('click',function() {});
+
+window.addEventListener('click',function() {
+  currentPage();
+  console.log("");
+});
+
+function currentPage(){
+  const navlinks = document.querySelectorAll(".navbar-item");
+  const windowPathname = window.location.pathname;
+  
+  navlinks.forEach(navlink=>{
+    if(navlink.href.includes(windowPathname)){
+      navlink.classList.add('active');
+    }
+  });
+
 }
 
 
@@ -23,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
       sidebarLinks.forEach((link) => link.classList.remove('active'));
       sidebarLinks[index].classList.add('active');
   }
+
   setActiveLink();
   
   window.addEventListener('scroll', setActiveLink);
@@ -38,21 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  //Need to check
-  const navlinks = document.querySelectorAll('.navbar-item');
-  const windowPathname = window.location.pathname;
-  
-  navlinks.forEach(navlink=>{
-    if(navlink.href.includes(windowPathname)){
-      navlink.classList.add(' active');
-    }
-  });
-  
 
 });
-
-
-
 
 
 
