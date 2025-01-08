@@ -11,26 +11,40 @@ function showProgress() {
 
 }
 
-window.onload = function(){currentPage()};
-//can't show correctly, mightbe the trigger problem
-
-// document.getElementById("navbar-list").addEventListener('click',function() {});
-
 window.addEventListener('click',function() {
   currentPage();
-  console.log("");
 });
 
-function currentPage(){
-  const navlinks = document.querySelectorAll(".navbar-item");
-  const windowPathname = window.location.pathname;
-  
-  navlinks.forEach(navlink=>{
-    if(navlink.href.includes(windowPathname)){
-      navlink.classList.add('active');
-    }
-  });
+window.addEventListener('load',function() {
+  currentPage();
+});
 
+
+function currentPage(){
+
+
+  var navlinks = document.querySelectorAll(".navbar-item");
+  
+  if(window.location.href.endsWith('/')){
+    window.location.replace(window.location.href+"index.html");
+  };
+
+  if(window.location.href.includes('index.html')){
+    navlinks[0].classList.add('active');
+  };
+
+  if(window.location.pathname.includes('project')){
+    console.log("hi");
+    console.log(navlinks[0].classList);
+    navlinks[0].classList.add('active');
+    console.log(navlinks[0].classList);
+
+  };
+
+  if(window.location.href.includes('about.html')){
+    navlinks[1].classList.add('active');
+  };
+ 
 }
 
 
