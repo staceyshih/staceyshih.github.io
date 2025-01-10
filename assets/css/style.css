@@ -320,7 +320,7 @@ article.active {
 
 .navbar-item.active { 
   font-weight: var(--fw-600);
-  color: var(--primary);
+  color: var(--gray-500);
 
 }
 
