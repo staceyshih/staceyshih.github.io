@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2023 @staceyshih
+ * copyright 2025 @staceyshih
  */
 
 /*-----------------------------------*\
@@ -44,7 +44,7 @@
   --gray-primpary:#78ae8d1e;
 
   /* gradient */
-  --white-gradient:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 100%);
+  --white-gradient:linear-gradient(to bottom, rgba(255, 255, 255, 90) 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 100%);
   --prgress-gradient:linear-gradient(to right, var(--primary)  0%, var(--blue) 40%, var(--yellow)100%);
 
   /**
@@ -260,10 +260,10 @@ article.active {
   padding: 6px 5% 6px 5%;
   left: 50%;
   transform: translate(-50%, 0%);
-  background: var(--gray-50-85);
+  background: var(--white);
   backdrop-filter: blur(10px);
   border: 2px solid var(--gray-200);
-  border-radius: 24px;
+  border-radius: 16px ;
   box-shadow: var(--shadow-1);
   z-index: 5;
   display: flex;
@@ -354,18 +354,26 @@ main {
   font-size: var(--fs-1);
   font-weight: var(--fw-500);
   line-height: 1.6;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 .intro-title>p{
   margin-bottom: 8px;
 }
 
-.intro-text{
+.intro-subtitle{
+  padding-top: 16px;
   color: var(--gray-600);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
+
+.intro-text{
+  color: var(--gray-500);
   font-size: var(--fs-4);
   font-weight: var(--fw-400);
-  padding-top:12px;
+  padding-top:4px;
 }
 
 /*-----------------------------------*\
@@ -396,7 +404,7 @@ main {
 .project-img {
   position: relative;
   width: 100%;
-  /* border: 2px solid var(--gray-100); */
+  height: 100%;
   box-shadow: var(--shadow-1) ;
   aspect-ratio: auto;
   border-radius: 16px;
@@ -957,7 +965,7 @@ body { background: var(--white); }
 
     --fs-1: 32px;
     --fs-2: 24px;
-    --fs-3: 26px;
+    --fs-3: 20px;
     --fs-4: 18px;
     --fs-5: 16px;
     --fs-6: 15px;
@@ -1035,7 +1043,7 @@ body { background: var(--white); }
     max-width: 80%;
   }
   .about-profile-text{
-    font-size: var(--fs-4);
+    font-size: var(--fs-3);
   }
 
 
@@ -1130,7 +1138,7 @@ body { background: var(--white); }
     margin: 0px 64px;
   }
   .about-profile-text{
-    font-size: var(--fs-4);
+    font-size: var(--fs-3);
   }
 
   /**
@@ -1191,9 +1199,9 @@ body { background: var(--white); }
   }
 
   .intro-text{
-    color: var(--gray-500);
+    color: var(--gray-600);
     font-size: var(--fs-3);
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-400);
     line-height: 1.6;
     margin-bottom: 32 px;
   }
@@ -1236,7 +1244,7 @@ body { background: var(--white); }
     width: 100%;
     max-width: calc(100% - 40px);
     height: max-content;
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 12px 3% 12px 3% ;
     box-shadow: var(--shadow-2);
     background-color: var(--gray-50-85);
@@ -1258,7 +1266,7 @@ body { background: var(--white); }
     top:0px;
     width: 100%;
     z-index:1 ;
-    height: 80px;
+    height: 56px;
     background: var(--white-gradient);
   }
 
