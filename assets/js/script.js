@@ -11,18 +11,31 @@ function showProgress() {
 
 }
 
+
+// Navbar
+let lastPos = 0
+
+document.addEventListener('scroll',function(){
+  let currentPos =  window.scrollY;
+
+  if(currentPos > lastPos){
+    document.getElementById("navbar").classList.remove('active');
+  }else{
+    document.getElementById("navbar").classList.add('active'); 
+  }
+  lastPos = currentPos;
+});
+
+
+
 window.addEventListener('click',function() {
   currentPage();
 });
-
 window.addEventListener('load',function() {
   currentPage();
 });
 
-
 function currentPage(){
-
-
   var navlinks = document.querySelectorAll(".navbar-item");
   
   if(window.location.href.endsWith('/')){
@@ -34,10 +47,10 @@ function currentPage(){
   };
 
   if(window.location.pathname.includes('project')){
-    console.log("hi");
-    console.log(navlinks[0].classList);
+   // console.log("hi");
+    //console.log(navlinks[0].classList);
     navlinks[0].classList.add('active');
-    console.log(navlinks[0].classList);
+    //console.log(navlinks[0].classList);
 
   };
 
@@ -48,6 +61,7 @@ function currentPage(){
 }
 
 
+// Side Bar
 document.addEventListener('DOMContentLoaded', function() {
   const sidebarLinks = document.querySelectorAll('.sidebar-item');
   const sections = document.querySelectorAll('section');
