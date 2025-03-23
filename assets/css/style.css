@@ -91,6 +91,7 @@
   --transition-2: 0.5s ease-in-out;
 
   --padding-20: 8px 20px 8px 20px;
+  --border-radius-round:1000px;
 }
 
 /*-----------------------------------*\
@@ -252,24 +253,6 @@ article.active {
   #NAVBAR
 \*-----------------------------------*/
 
-.navbar.active{
-  position: fixed;
-  bottom: 16px;
-  width: 100%;
-  max-width: calc(100% - 20px);
-  padding: 6px 5% 6px 5%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  background: var(--white);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--gray-200);
-  border-radius: 16px ;
-  box-shadow: var(--shadow-1);
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .navbar{
   position: fixed;
@@ -278,17 +261,26 @@ article.active {
   max-width: calc(100% - 20px);
   padding: 6px 5% 6px 5%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 50%);
   background: var(--white);
   backdrop-filter: blur(10px);
   border: 2px solid var(--gray-200);
-  border-radius: 16px ;
+  border-radius: var(--border-radius-round) ;
   box-shadow: var(--shadow-1);
   z-index: 5;
-  display: none;
+  display: flex;
+  transition: var(--transition-1);
+  opacity: 0;
   align-items: center;
   justify-content: space-between;
 }
+
+.navbar.active{
+  transform: translate(-50%, 0%);
+  display: flex;
+  opacity: 100;
+}
+
 
 .navbar-brand>img{
   max-width: 42px;
@@ -1266,16 +1258,37 @@ body { background: var(--white); }
    */
 
   .navbar.active {
+    position: fixed;
     top: 16px;  
     width: 100%;
     max-width: calc(100% - 40px);
     height: max-content;
-    border-radius: 16px;
+    border-radius: 1000px;
     padding: 12px 3% 12px 3% ;
     box-shadow: var(--shadow-2);
     background-color: var(--gray-50-85);
   }
 
+  .navbar{
+    position: fixed;
+    top: -80px;  
+    width: 100%;
+    height: max-content;
+    max-width: calc(100% - 40px);
+    padding: 12px 3% 12px 3% ;
+    left: 50%;
+    background: var(--white);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gray-200);
+    border-radius: 1000px ;
+    box-shadow: var(--shadow-1);
+    z-index: 5;
+    display: flex;
+    transition: var(--transition-1);
+    opacity: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
   .navbar-item{
     font-size: var(--fs-5);
   }
