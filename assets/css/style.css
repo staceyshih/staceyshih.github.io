@@ -1084,7 +1084,7 @@ body { background: var(--white); }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
-  .navbar.active{
+  .navbar .navbar.active{
     padding: 8px 2% 8px 2%;
   }
 
@@ -1257,17 +1257,7 @@ body { background: var(--white); }
    * NAVBAR
    */
 
-  .navbar.active {
-    position: fixed;
-    top: 16px;  
-    width: 100%;
-    max-width: calc(100% - 40px);
-    height: max-content;
-    border-radius: 1000px;
-    padding: 12px 3% 12px 3% ;
-    box-shadow: var(--shadow-2);
-    background-color: var(--gray-50-85);
-  }
+ 
 
   .navbar{
     position: fixed;
@@ -1280,7 +1270,7 @@ body { background: var(--white); }
     background: var(--white);
     backdrop-filter: blur(10px);
     border: 2px solid var(--gray-200);
-    border-radius: 1000px ;
+    border-radius:  var(--border-radius-round) ;
     box-shadow: var(--shadow-1);
     z-index: 5;
     display: flex;
@@ -1289,6 +1279,14 @@ body { background: var(--white); }
     align-items: center;
     justify-content: space-between;
   }
+
+  .navbar.active {
+    position: fixed;
+    top: 16px;  
+    box-shadow: var(--shadow-2);
+    background-color: var(--gray-50-85);
+  }
+
   .navbar-item{
     font-size: var(--fs-5);
   }
@@ -1300,14 +1298,7 @@ body { background: var(--white); }
     gap: 30px;
   }
 
-  .navbar-bg{
-    position: fixed;
-    top:0px;
-    width: 100%;
-    z-index:1 ;
-    height: 56px;
-    background: var(--white-gradient);
-  }
+
 
 
   /**
