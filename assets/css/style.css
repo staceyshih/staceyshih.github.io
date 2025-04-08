@@ -739,9 +739,6 @@ ol>p{
   width: 100%;
   aspect-ratio: auto;
   border-radius: 8px;
-  border-style:groove;
-  border: 1px solid;
-  border-color: #00000008;
   margin-bottom: 8px;
 }
 
@@ -749,6 +746,9 @@ ol>p{
   width: 50%;
   transform: translateX(50%);
   aspect-ratio: auto;
+  border-style:groove;
+  border: 1px solid;
+  border-color: #00000012;
   border-radius: 8px;
 
 }
