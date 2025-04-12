@@ -544,7 +544,7 @@ main {
   font-size: var(--fs-4);
   color:var(--gray-500);
   line-height: 1.4;
-  margin: 8px 0px 4px 0px;
+  margin: 12px 0px 4px 0px;
 }
 
 .text-link{
