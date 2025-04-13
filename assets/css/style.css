@@ -680,7 +680,7 @@ ol>p{
   margin-bottom: 16px;
 }
 
-.prject-detail-stats{
+.project-detail-stats{
   display: grid;
   margin:12px 0px ;
   grid-template-columns: repeat(auto-fit,minmax(80px, 1fr));
