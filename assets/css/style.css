@@ -682,40 +682,36 @@ ol>p{
 
 .project-detail-stats{
   display: grid;
-  margin:12px 0px ;
-  grid-template-columns: repeat(auto-fit,minmax(80px, 1fr));
-  width: 100%;
-  column-gap: 12px;
+  margin:4px;
+  width: 96%;
 }
 
 .stats-item{
   background-color: var(--gray-100);
   border-radius: 8px;
-  padding: 8px 12px 8px 12px ;
+  padding: 12px 24px 12px 24px ;
   display: grid;
-  place-content: center;
+  place-content: left;
+  margin-bottom: 8px;
 }
 
 .stats-title{
+  padding-bottom: 8px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   color: var(--gray-500);
-  padding-bottom: 4px;
 }
 
 .stats-text{
   font-size: var(--fs-8);
   font-weight: var(--fw-400);
   color: var(--gray-600);
-  min-height: 50px;
   display: flex;
-  align-items: center;
-  text-align: center;
 }
 
 .stats-text>ul>li{
-  margin-left: 20px;
-  padding: 4px;
+  margin-left: 16px;
+  padding-bottom: 4px;
   text-align: left;
   list-style-type:circle;
   display: list-item;
@@ -1101,6 +1097,12 @@ body { background: var(--white); }
 
   .navbar .navbar.active{
     padding: 8px 2% 8px 2%;
+  }
+
+  .project-detail-stats>.stats-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 90%;
   }
 
   .project-parent{
