@@ -681,7 +681,7 @@ ol>p{
 }
 
 .project-detail-stats{
-  display: grid;
+  display: inline-block;
   margin:4px;
   width: 96%;
 }
@@ -1099,10 +1099,15 @@ body { background: var(--white); }
     padding: 8px 2% 8px 2%;
   }
 
-  .project-detail-stats>.stats-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 90%;
+  .project-detail-stats{
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 12px;
+  }
+
+  .stats-item{
+    display: inline-block;
+    width: calc(33% - 8px);
   }
 
   .project-parent{
