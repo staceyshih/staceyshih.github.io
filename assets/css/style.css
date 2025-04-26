@@ -500,6 +500,9 @@ main {
 .project-banner-normal{display:block;}
 .project-banner-wide{display:none;}
 
+.image-mobile{display:block;}
+.image-desktop{display:none;}
+
 
 .sidebar{
   max-width: 30%vw;
@@ -1257,6 +1260,10 @@ body { background: var(--white); }
 
   .project-banner-normal{display:none;}
   .project-banner-wide{display:block;}
+
+  
+  .image-mobile{display:none;}
+  .image-desktop{display:block;}
 
   /**
    * MAIN 
